@@ -6,7 +6,7 @@ export default class Footer extends Component {
       <>
         <footer>
           <section>
-            <img src='/public/Logo.svg' alt='logo' />
+            <img src='../public/Logo.svg' alt='logo' />
           </section>
           <section>
             <h2>Doormat Navigation</h2>
@@ -34,9 +34,9 @@ export default class Footer extends Component {
           <section>
             <h2>Contact</h2>
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>phone</li>
+              <li>email</li>
+              <li>address</li>
             </ul>
           </section>
           <section>
