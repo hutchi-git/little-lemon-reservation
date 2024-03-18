@@ -1,30 +1,30 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 
 export default class Nav extends Component {
   render () {
     return (
       <>
         <nav>
-          <ul>
-            <li>
-              <a href=''> Home</a>
-            </li>
-            <li>
-              <a href=''>About</a>
-            </li>
-            <li>
-              <a href=''>Menu</a>
-            </li>
-            <li>
-              <a href=''>Reservations</a>
-            </li>
-            <li>
-              <a href=''>Order Online</a>
-            </li>
-            <li>
-              <a href=''>Login</a>
-            </li>
-          </ul>
+          <Link to='/' className='nav-item'>
+            Home
+          </Link>
+          <HashLink to='/#about' className='nav-item'>
+            About
+          </HashLink>
+          <Link to='/' className='nav-item'>
+            Menu
+          </Link>
+          <Link to='/Reservation' className='nav-item'>
+            Reservations
+          </Link>
+          <Link to='/' className='nav-item'>
+            Order Online
+          </Link>
+          <Link to='/' className='nav-item'>
+            Login
+          </Link>
         </nav>
       </>
     )

@@ -12,6 +12,7 @@ flex-direction: column;
 h1{
   font-family: Markazi;
   font-size: 64pt;
+  margin-top: 0;
 }
 
 h2{
@@ -37,9 +38,14 @@ header{
 main{
 background-color: chocolate;
 order:2;
-min-height: 70vh;
 height:auto;
 }
+
+main> section{
+  height: 100vh;
+  background-color: #EDefee;
+}
+
 .hero{
     background-color: var(--primary-color-1);
     padding: 2vw 20vh 0 20vh;
@@ -48,11 +54,13 @@ height:auto;
     flex-direction: row;
     column-gap: 5vw;
     justify-content: space-evenly;
+    height: 70vh;
   }
-  .hero img{
+  .hero img {
   max-width: 20rem ;
-  
-
+ }
+ img {
+  max-width: 20rem ;
 }
 
 .hero h1{
@@ -93,7 +101,7 @@ text-wrap: nowrap;
 
 }
 .bannerImage{
-  align-self: flex-end;
+ 
   overflow:visible;
 }
 footer{
@@ -106,7 +114,7 @@ justify-content: space-evenly;
 }
 
 /*nav bar */
-nav ul {
+nav{
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -116,15 +124,10 @@ nav ul {
   
 }
 
-nav li {
+.nav-item{
   float: none;
   display: inline-block;
-  }
-
-
-nav li a {
-  display: block;
-  color: white;
+   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
