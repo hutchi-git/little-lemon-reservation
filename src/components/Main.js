@@ -1,22 +1,23 @@
-import React, { Component } from 'react'
-import { Route, Routes } from 'react-router-dom'
-import { HashLink } from 'react-router-hash-link'
+import { React, Component, useState } from 'react'
+import { Router, Route, Routes } from 'react-router-dom'
 
 import Home from './Home'
 
-import Booking from './Booking'
+import BookingPage from './BookingPage'
+import Confirmation from './Confirmation'
 
-export default class Main extends Component {
-  render () {
-    return (
-      <>
-        <main>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/Reservation' element={<Booking />} />
-          </Routes>
-        </main>
-      </>
-    )
-  }
+function Main () {
+  return (
+    <>
+      <main>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/Reservation' element={<BookingPage />} />
+          <Route path='/Confirmation' element={<Confirmation />} />
+        </Routes>
+      </main>
+    </>
+  )
 }
+
+export default Main

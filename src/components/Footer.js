@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
+import logo from '../images/Logo .svg'
 
 export default class Footer extends Component {
   render () {
     return (
       <>
         <footer>
-          <section>
-            <img src='../public/Logo.svg' alt='logo' />
+          <section className='logo-section'>
+            <img src={logo} alt='logo' />
           </section>
           <section>
             <h2>Doormat Navigation</h2>
@@ -34,22 +35,29 @@ export default class Footer extends Component {
           <section>
             <h2>Contact</h2>
             <ul>
-              <li>phone</li>
-              <li>email</li>
-              <li>address</li>
+              <li>
+                <address>
+                  1 876 567 2345 <br />
+                  CustomerSer@littleLemon.com
+                  <br />
+                  Box 564, Disneyland
+                  <br />
+                  USA
+                </address>
+              </li>
             </ul>
           </section>
           <section>
             <h2>Social Media Liks</h2>
             <ul>
               <li>
-                <a href='http://'>face</a>
+                <a href='http://'>Facebook : littlelemonRes </a>
               </li>
               <li>
-                <a href='http://'>gram</a>
+                <a href='http://'>Instagram : littlelemonRes</a>
               </li>
               <li>
-                <a href='http://'>x</a>
+                <a href='http://'>Twitter : littlelemonRes</a>
               </li>
             </ul>
           </section>
