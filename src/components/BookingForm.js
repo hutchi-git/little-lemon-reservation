@@ -2,7 +2,7 @@ import React, { Component, useState } from 'react'
 import '../styles/form.css'
 
 function BookingForm ({ availableTimes, dispatch, submitForm }) {
-  // const availableTimes[] = availableTimes
+  console.log(availableTimes)
 
   const [formData, SetFormData] = useState({
     fullName: '',
@@ -16,15 +16,11 @@ function BookingForm ({ availableTimes, dispatch, submitForm }) {
   const occasionArr = ['Birthday', 'Anniversay', 'Engagement']
 
   const handleChange = event => {
-    // let isValid = true;
-    //  const newErrors = {};
-
     const { name, value } = event.target
 
     SetFormData({ ...formData, [name]: value })
 
     if (formData.eventDate) {
-      console.log('testing update time: ' + formData.eventDate)
       dispatch({ type: 'UPDATE_TIMES' })
     }
   }
@@ -113,7 +109,7 @@ function BookingForm ({ availableTimes, dispatch, submitForm }) {
                   onChange={handleChange}
                   required
                 >
-                  {availableTimes.map(time => (
+                  {availableTimes?.map(time => (
                     <option key={time}>{time}</option>
                   ))}
                 </select>

@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
+import '../styles/form.css'
 
 function Confirmation () {
   return (
-    <div className='confirm'>
-      <section>
-        <div>
+    <>
+      <section id='Confirmation'>
+        <div className='confirm'>
           <h1>Booking has been confirmed !</h1>
         </div>
       </section>
-    </div>
+    </>
   )
 }
 export default Confirmation
